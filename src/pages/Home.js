@@ -8,4 +8,5 @@ class Home extends ReactComponent{
         </div>
     }
 }
+
 export default Home

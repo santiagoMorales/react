@@ -1,5 +1,6 @@
 import React from 'react';
 import  {withRouter}  from 'react-router-dom'
+import '../Form.css';
 import { Button, Navbar, Nav,Form,FormControl, NavDropdown} from 'react-bootstrap';
 
 class NavBar extends React.Component {
@@ -9,7 +10,7 @@ class NavBar extends React.Component {
     navLink (){
            return <React.Fragment>
              <Nav.Item>
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#home" >Home</Nav.Link>
               </Nav.Item>
               <Nav.Link href="#features">Features</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
@@ -19,9 +20,8 @@ class NavBar extends React.Component {
     }
     render() {
         return (
-                    
-             <Navbar fixed="top"
-              collapseOnSelect expand="lg" bg="dark" variant="dark">
+   
+             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="#home">Navbar</Navbar.Brand>
              <Nav variant="pills" defaultActiveKey="/home" className="mr-auto">
              {this.navLink()}
@@ -40,6 +40,7 @@ class NavBar extends React.Component {
               <Button variant="outline-info">Search</Button>
             </Form>
           </Navbar>
+         
         
         )
     }

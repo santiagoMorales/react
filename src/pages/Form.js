@@ -2,6 +2,7 @@ import React from 'react'
 import { Button,Form, Container, Row, Col} from 'react-bootstrap';
 import '../Form.css';
 import Agregar from './agregar'
+import {Animated} from "react-animated-css";
 
 class FormMail extends React.Component{
     constructor(args){
@@ -12,6 +13,7 @@ class FormMail extends React.Component{
             ]
         }
       }     
+      
     add(e){
         const emailInput = document.getElementById('email')
         const passwordInput = document.getElementById('pwd')    
@@ -37,7 +39,7 @@ class FormMail extends React.Component{
     render(){
         return ( 
         <div>    
-           <Container>
+           <Container  >
             <Row>
                 <p>      
 
@@ -46,8 +48,9 @@ class FormMail extends React.Component{
                 <Row>
                   <Col sm></Col>
                   <Col sm>
-                    <Form>
-                       <Container  className='ok rounded-lg p-4' >
+                  <Animated animationIn ="zoomIn" isVisible={true}>
+                    <Form className ="fadeInDown    ">
+                       <Container l className='ok rounded-lg p-4' >
                           <Row>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -74,6 +77,7 @@ class FormMail extends React.Component{
                         
                         </Container>
                     </Form> 
+                    </Animated>
                  </Col>
                     <Col sm>
                     <ul>
@@ -85,14 +89,20 @@ class FormMail extends React.Component{
                                 email={user.email}
                                 pwd={user.pwd}
                                 deleteOp={this.delete.bind(this)}
+
                             />
-                            } )
+                            })
                             
                         }
                         </ul>
                     </Col>
                 </Row>
             </Container>
+            <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
+            <div>
+                <h3>Prueba animacion</h3>
+            </div>
+            </Animated>
          </div>  
            
         )
