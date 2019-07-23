@@ -32,14 +32,13 @@ class FormMail extends React.Component{
         })
       } 
 
-      
       delete(e){
 
       }
     render(){
         return ( 
         <div>    
-           <Container  >
+           <Container>
             <Row>
                 <p>      
 
@@ -49,8 +48,8 @@ class FormMail extends React.Component{
                   <Col sm></Col>
                   <Col sm>
                   <Animated animationIn ="zoomIn" isVisible={true}>
-                    <Form className ="fadeInDown    ">
-                       <Container l className='ok rounded-lg p-4' >
+                    <Form className ="fadeInDown ">
+                       <Container  className='ok rounded-lg p-4' >
                           <Row>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
